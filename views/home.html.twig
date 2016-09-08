@@ -1,18 +1,37 @@
 <html>
     <head>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+        <link href='css/styles.css' type='text/css' rel='stylesheet'>
         <title>Hangman</title>
     </head>
     <body>
-        <h1>Hangman</h1>
-        <p>
-            {% for letter in answerDisplay %}
-                {{ letter }}
-            {% endfor %}
-        </p>
-        <form action='/' method='post'>
-            <label>Guess a letter:</label>
-            <input type='text' name='guess' maxlength='1'>
-            <button type='submit'>Guess!</button>
-        </form>
+        <div class = "container">
+            <h1>Hangman</h1>
+            <!-- <p>______________</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |</p>
+            <p class='head'>              |</p>
+            <p class='head'>              |</p>
+            <p class='neck'>              |</p>
+            <p class='arms'>              |</p>
+            <p class='torso'>              |</p>
+            <p class='torso'>              |</p>
+            <p class='legs'>              |</p>
+            <p class='legs'>              |</p>
+            <p class='feet'>              |</p>
+            <p>              |</p>
+            <p>          ____|____</p> -->
+
+            <p>{{ head }}</p>
+
+                {% for letter in answerDisplay %}
+                    {{ letter }}
+                {% endfor %}
+            </p>
+            <form action='/' method='post'>
+                <label>Guess a letter:</label>
+                <input type='text' name='guess' maxlength='1' autofocus>
+                <button type='submit'>Guess!</button>
+            </form>
+        </div>
     </body>
 </html>
