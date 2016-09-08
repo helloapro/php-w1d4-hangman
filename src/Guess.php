@@ -17,6 +17,11 @@
         {
             return $this->letter;
         }
+//Methods
+        function save()
+        {
+            array_push($_SESSION['guesses'], $this);
+        }
     }
 
 ?>

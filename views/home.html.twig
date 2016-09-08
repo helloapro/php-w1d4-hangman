@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Hangman</title>
+    </head>
+    <body>
+        <h1>Hangman</h1>
+        <p>
+            {% for letter in answerDisplay %}
+                {{ letter }}
+            {% endfor %}
+        </p>
+        <form action='/' method='post'>
+            <label>Guess a letter:</label>
+            <input type='text' name='guess' maxlength='1'>
+            <button type='submit'>Guess!</button>
+        </form>
+    </body>
+</html>
